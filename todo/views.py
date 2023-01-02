@@ -11,6 +11,7 @@ from todo.models import Todo, Type
 #     todos = Todo.objects.order_by('todo')
 #     return render(request, 'todo/todo_list.html', {'todos': todos})
 
+# SELECT JOIN: select_related()
 def todo_list(request):
     todos = Todo.objects.select_related('type').order_by('todo')
     return render(request, 'todo/todo_list.html', {'todos': todos})
