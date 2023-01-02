@@ -2,7 +2,7 @@
 
 MyTodo App with multiple database tables.
 
-  * tables: todo, tpye
+  * tables: todo, type
 
 
 https://tutorial.djangogirls.org/hu/
