@@ -7,8 +7,12 @@ from todo.models import Todo, Type
 # Create your views here.
 
 
+# def todo_list(request):
+#     todos = Todo.objects.order_by('todo')
+#     return render(request, 'todo/todo_list.html', {'todos': todos})
+
 def todo_list(request):
-    todos = Todo.objects.order_by('todo')
+    todos = Todo.objects.select_related('type').order_by('todo')
     return render(request, 'todo/todo_list.html', {'todos': todos})
 
 

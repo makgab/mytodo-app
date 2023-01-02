@@ -8,6 +8,7 @@
             </div>
             <h1><a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.todo }}</a></h1>
             <p>{{ todo.description|linebreaksbr }}</p>
+            <li>{{ todo.type|linebreaksbr }}</li>
         </div>
     {% endfor %}
 {% endblock %}
