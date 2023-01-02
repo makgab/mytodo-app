@@ -1,0 +1,10 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    {% for type in types %}
+        <div>
+            <h1><a href="{% url 'type_detail' pk=type.pk %}">{{ type.type }}</a></h1>
+            <p>{{ type.type }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

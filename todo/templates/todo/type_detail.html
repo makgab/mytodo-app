@@ -1,0 +1,10 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'type_edit' pk=type.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+        <h1>{{ type.type }}</h1>
+    </div>
+{% endblock %}

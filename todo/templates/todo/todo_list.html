@@ -1,0 +1,13 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    {% for todo in todos %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.todo }}</a></h1>
+            <p>{{ todo.description|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
