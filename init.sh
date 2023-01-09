@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# blog django app init DB
+# MYTodo django app init DB
 #
 
 # init DB
